@@ -12,7 +12,8 @@ var errorMessages = {
     emptyInputs: 'All fields are required',
     signUpName: 'Name must be at least 3 characters long',
     signUpEmail: 'Email must be valid',
-    signUpPassword: 'Password must be at least 6 characters long'
+    signUpPassword: 'Password must be at least 6 characters long',
+    emailExists: 'Email already exists'
 }
 
 
@@ -52,6 +53,11 @@ function validateSignUp() {
     inputs = Array.from(signUpForm.querySelectorAll('input'));
     if(checkEmpty(inputs)) {
         displayMessage(errorObject, errorMessages.emptyInputs);
+        hideObject(successObject);
+        return false;
+    }
+    if(emailExists(signUpEmail.value.toLowerCase())) {
+        displayMessage(errorObject, errorMessages.emailExists);
         hideObject(successObject);
         return false;
     }
@@ -109,4 +115,12 @@ function clearForm() {
 }
 
 
+function emailExists(email) {
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].email === email) {
+            return true;
+        }
+    }
+    return false;
+}
 
