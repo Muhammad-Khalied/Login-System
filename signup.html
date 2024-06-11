@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="py-5 vh-100">
+      <div class="container">
+        <div class="mx-auto bg-my-secondary group text-center text-white w-75 py-5">
+          <h1 class="text-center py-2">Smart Login System</h1>
+          <div class="signup-form">
+            <form class="px-5">
+              <div class="mb-3">
+              <input type="text" class="form-control bg-my-secondary text-white rounded-1" id="signUpName" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+              <input type="email" class="form-control bg-my-secondary text-white rounded-1" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+              <input type="password" class="form-control bg-my-secondary text-white rounded-1" id="signUpPassword" placeholder="Enter your password">
+              </div>
+              <div class="error-message">
+                <p id="" class="d-none text-danger m-3"></p>
+              </div>
+              <div class="success-message">
+                <p id="" class="d-none text-success m-3"></p>
+              </div>
+              <button type="submit" id="signUpBtn" class="btn btn-outline-info w-100 mt-3">Sign Up</button>
+            </form>
+            <p class="text-white mt-3">You have an account? <a href="index.html" id="logInLink">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script_signup.js"></script>
+  </body>
+</html>
